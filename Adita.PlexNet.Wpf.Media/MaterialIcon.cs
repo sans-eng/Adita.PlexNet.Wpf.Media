@@ -30,7 +30,7 @@ namespace Adita.PlexNet.Wpf.Media
     /// <summary>
     /// Represents an icon.
     /// </summary>
-    public sealed class MaterialIcon : UIElement
+    public sealed class MaterialIcon : UIElement, IIcon
     {
         #region Private constants
         private const string _standardFontPath = "pack://application:,,,/Adita.PlexNet.Wpf.Media;component/Resources/Fonts/MaterialIcons-Regular.ttf";
@@ -132,7 +132,7 @@ namespace Adita.PlexNet.Wpf.Media
             set => SetValue(BrushProperty, value);
         }
         /// <summary>
-        /// Gets or sets a <see cref="HorizontalAlignment"/> of current <see cref="MaterialIcon"/>.
+        /// Gets or sets a <see cref="System.Windows.HorizontalAlignment"/> of current <see cref="MaterialIcon"/>.
         /// </summary>
         public HorizontalAlignment HorizontalAlignment
         {
@@ -140,7 +140,7 @@ namespace Adita.PlexNet.Wpf.Media
             set { SetValue(HorizontalAlignmentProperty, value); }
         }
         /// <summary>
-        /// Gets or sets a <see cref="VerticalAlignment"/> of current <see cref="MaterialIcon"/>.
+        /// Gets or sets a <see cref="System.Windows.VerticalAlignment"/> of current <see cref="MaterialIcon"/>.
         /// </summary>
         public VerticalAlignment VerticalAlignment
         {
