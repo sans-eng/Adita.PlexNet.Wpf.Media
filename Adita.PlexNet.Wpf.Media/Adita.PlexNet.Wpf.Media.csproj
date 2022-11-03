@@ -1,47 +1,69 @@
+<!--MIT License
+
+Copyright (c) 2022 Adita
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.-->
+
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <Title>Adita.PlexNet.Wpf.Media</Title>
-    <Version>1.0.0.0</Version>
-    <Authors>Setya Adi Kurnia</Authors>
-    <Company>Adita</Company>
-    <Description>A media utilities for PlexNet framework that targeting .NET 6.</Description>
-    <Copyright>© 2022 Adita</Copyright>
-    <PackageProjectUrl>https://plexdotnet.adita-engineering.com</PackageProjectUrl>
-    <PackageIcon>favicon.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/sans-eng/Adita.PlexNet.Wpf.Media</RepositoryUrl>
-    <PackageTags>media; wpf; net; net6; plexnet;</PackageTags>
-    <PackageReleaseNotes>First release</PackageReleaseNotes>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Title>Adita.PlexNet.Wpf.Media</Title>
+		<Version>1.0.0.0</Version>
+		<Authors>Setya Adi Kurnia</Authors>
+		<Company>Adita</Company>
+		<Description>A media utilities for PlexNet framework that targeting .NET 6.</Description>
+		<Copyright>© 2022 Adita</Copyright>
+		<PackageProjectUrl>https://plexdotnet.adita-engineering.com</PackageProjectUrl>
+		<PackageIcon>favicon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/sans-eng/Adita.PlexNet.Wpf.Media</RepositoryUrl>
+		<PackageTags>media; wpf; net; net6; plexnet;</PackageTags>
+		<PackageReleaseNotes>First release</PackageReleaseNotes>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\favicon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\favicon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Resources\Fonts\MaterialIcons-Regular.ttf" />
-    <Resource Include="Resources\Fonts\MaterialIconsOutlined-Regular.otf" />
-    <Resource Include="Resources\Fonts\MaterialIconsRound-Regular.otf" />
-    <Resource Include="Resources\Fonts\MaterialIconsSharp-Regular.otf" />
-    <Resource Include="Resources\Fonts\MaterialIconsTwoTone-Regular.otf" />
-  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="Resources\Fonts\MaterialIcons-Regular.ttf" />
+		<Resource Include="Resources\Fonts\MaterialIconsOutlined-Regular.otf" />
+		<Resource Include="Resources\Fonts\MaterialIconsRound-Regular.otf" />
+		<Resource Include="Resources\Fonts\MaterialIconsSharp-Regular.otf" />
+		<Resource Include="Resources\Fonts\MaterialIconsTwoTone-Regular.otf" />
+	</ItemGroup>
 
 </Project>
