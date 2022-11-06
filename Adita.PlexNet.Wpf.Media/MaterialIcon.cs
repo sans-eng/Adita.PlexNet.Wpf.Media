@@ -20,6 +20,7 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
+using Adita.PlexNet.Wpf.Media.Internals;
 using System;
 using System.Windows;
 using System.Windows.Documents;
@@ -32,19 +33,9 @@ namespace Adita.PlexNet.Wpf.Media
     /// </summary>
     public sealed class MaterialIcon : UIElement, IIcon
     {
-        #region Private constants
-        private const string _standardFontPath = "pack://application:,,,/Adita.PlexNet.Wpf.Media;component/Resources/Fonts/MaterialIcons-Regular.ttf";
-        private const string _outlineFontPath = "pack://application:,,,/Adita.PlexNet.Wpf.Media;component/Resources/Fonts/MaterialIconsOutlined-Regular.otf";
-        private const string _roundFontPath = "pack://application:,,,/Adita.PlexNet.Wpf.Media;component/Resources/Fonts/MaterialIconsRound-Regular.otf";
-        private const string _sharpFontPath = "pack://application:,,,/Adita.PlexNet.Wpf.Media;component/Resources/Fonts/MaterialIconsSharp-Regular.otf";
-        private const string _twoToneFontPath = "pack://application:,,,/Adita.PlexNet.Wpf.Media;component/Resources/Fonts/MaterialIconsTwoTone-Regular.otf";
-
-        private const string _fontNamePath = "/Adita.PlexNet.Wpf.Media;component/Resources/Fonts/MaterialIconNames.xaml";
-        #endregion Private constants
-
         #region Private fields
-        private readonly ResourceDictionary _unicodeStringDictionary = (ResourceDictionary)Application.LoadComponent(new Uri(_fontNamePath, UriKind.Relative));
-        Glyphs _childGlyps = new();
+        private readonly ResourceDictionary _unicodeStringDictionary = (ResourceDictionary)Application.LoadComponent(new Uri(MaterialIconResources.FontNamePath, UriKind.Relative));
+        private readonly Glyphs _childGlyps = new();
         private Size _availableSize;
         #endregion Private fields
 
@@ -171,7 +162,6 @@ namespace Adita.PlexNet.Wpf.Media
         {
             base.ArrangeCore(finalRect);
             _childGlyps.Arrange(GetChildRect());
-            //_childGlyps.Arrange(new Rect(0, 0, Size, Size));
         }
         /// <summary>Returns the specified <see cref="Visual" /> in the parent <see cref="VisualCollection" />.</summary>
         /// <param name="index">The index of the visual object in the <see cref="VisualCollection" />.</param>
@@ -205,11 +195,11 @@ namespace Adita.PlexNet.Wpf.Media
         {
             return iconKind switch
             {
-                MaterialIconKind.Standard => new(_standardFontPath),
-                MaterialIconKind.Outline => new(_outlineFontPath),
-                MaterialIconKind.Round => new(_roundFontPath),
-                MaterialIconKind.Sharp => new(_sharpFontPath),
-                MaterialIconKind.TwoTone => new(_twoToneFontPath),
+                MaterialIconKind.Standard => new(MaterialIconResources.StandardFontPath),
+                MaterialIconKind.Outline => new(MaterialIconResources.OutlineFontPath),
+                MaterialIconKind.Round => new(MaterialIconResources.RoundFontPath),
+                MaterialIconKind.Sharp => new(MaterialIconResources.SharpFontPath),
+                MaterialIconKind.TwoTone => new(MaterialIconResources.TwoToneFontPath),
                 _ => throw new ArgumentException($"Specified {nameof(Kind)} is not availabble."),
             };
         }
@@ -219,12 +209,16 @@ namespace Adita.PlexNet.Wpf.Media
             {
                 HorizontalAlignment.Center => double.IsFinite(_availableSize.Width) ? (_availableSize.Width / 2) - (Size / 2) : 0,
                 HorizontalAlignment.Right => double.IsFinite(_availableSize.Width) ? _availableSize.Width - Size : 0,
+                HorizontalAlignment.Left => 0,
+                HorizontalAlignment.Stretch => double.IsFinite(_availableSize.Width) ? (_availableSize.Width / 2) - (Size / 2) : 0,
                 _ => 0
             };
             double y = VerticalAlignment switch
             {
                 VerticalAlignment.Center => double.IsFinite(_availableSize.Height) ? (_availableSize.Height / 2) - (Size / 2) : 0,
                 VerticalAlignment.Bottom => double.IsFinite(_availableSize.Height) ? _availableSize.Height - Size : 0,
+                VerticalAlignment.Top => 0,
+                VerticalAlignment.Stretch => double.IsFinite(_availableSize.Height) ? (_availableSize.Height / 2) - (Size / 2) : 0,
                 _ => 0
             };
 
