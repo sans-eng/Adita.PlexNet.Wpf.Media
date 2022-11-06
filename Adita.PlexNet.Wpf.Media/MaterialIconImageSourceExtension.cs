@@ -60,7 +60,7 @@ namespace Adita.PlexNet.Wpf.Media
                 StyleSimulations = StyleSimulations.None,
                 Fill = Brush,
                 OriginX = 0,
-                OriginY = 100
+                OriginY = 0
             };
 
             return new DrawingImage(new GlyphRunDrawing(Brush, glyphs.ToGlyphRun()));
