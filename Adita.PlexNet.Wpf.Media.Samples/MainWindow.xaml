@@ -16,16 +16,21 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <media:MaterialIcon
-                        IconName="Access_alarm"
+                    <Button Height="80" Padding="0" 
+                            VerticalContentAlignment="Stretch"
+                            HorizontalContentAlignment="Stretch">
+                        <media:MaterialIcon
+                        IconName="Close"
                         Brush="Red"
                         Size="50"
-                        Kind="Round"
-                        HorizontalAlignment="Left"/>
+                        Kind="Standard"
+                        HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </Button>
                     <media:MaterialIcon
                         Grid.Column="1"
                         IconName="Account_balance"
@@ -57,6 +62,9 @@
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"/>
                 </Grid>
+            </TabItem>
+            <TabItem Header="Image source">
+                <Image Source="{media:MaterialIconImageSource IconName=Warning, Kind=Round, Brush=Aqua}"/>
             </TabItem>
         </TabControl>
     </Grid>
