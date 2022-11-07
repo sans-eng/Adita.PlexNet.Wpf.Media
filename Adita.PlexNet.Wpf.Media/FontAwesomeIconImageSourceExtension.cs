@@ -32,6 +32,7 @@ namespace Adita.PlexNet.Wpf.Media
     /// <summary>
     /// Represents a font awesome image source extension.
     /// </summary>
+    [MarkupExtensionReturnType(typeof(ImageSource))]
     public class FontAwesomeIconImageSourceExtension : MarkupExtension
     {
         #region Publis properties

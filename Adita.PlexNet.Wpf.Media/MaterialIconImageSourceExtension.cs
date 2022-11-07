@@ -32,7 +32,7 @@ namespace Adita.PlexNet.Wpf.Media
     /// <summary>
     /// Represents a material icon markup extension.
     /// </summary>
-    [MarkupExtensionReturnType(typeof(DrawingImage))]
+    [MarkupExtensionReturnType(typeof(ImageSource))]
     public class MaterialIconImageSourceExtension : MarkupExtension
     {
         #region Private fields

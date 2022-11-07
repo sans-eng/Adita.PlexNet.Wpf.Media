@@ -31,7 +31,7 @@ namespace Adita.PlexNet.Wpf.Media
     /// <summary>
     /// Represents a font image source markup extension.
     /// </summary>
-    [MarkupExtensionReturnType(typeof(DrawingImage))]
+    [MarkupExtensionReturnType(typeof(ImageSource))]
     public class FontImageSourceExtension : MarkupExtension
     {
         #region Public properties
