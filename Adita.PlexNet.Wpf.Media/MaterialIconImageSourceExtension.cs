@@ -40,12 +40,12 @@ namespace Adita.PlexNet.Wpf.Media
         /// <returns>The the image source value to set on the property where the extension is applied.</returns>
         public override object ProvideValue(IServiceProvider serviceProvider)
         {
-            return CreateImageSource(IconName, Kind, 100, Brush);
+            return CreateImageSource(IconName, Kind, Brush);
         }
         #endregion Public methods
 
         #region Private methods
-        private ImageSource CreateImageSource(string iconName, MaterialIconKind kind, double size, Brush brush)
+        private ImageSource CreateImageSource(string iconName, MaterialIconKind kind, Brush brush)
         {
             if (_unicodeStringDictionary[iconName] is not string unicodeString)
             {
@@ -54,11 +54,11 @@ namespace Adita.PlexNet.Wpf.Media
 
             Glyphs glyphs = new()
             {
-                FontUri = GetFontUri(Kind),
+                FontUri = GetFontUri(kind),
                 UnicodeString = unicodeString,
                 FontRenderingEmSize = 100,
                 StyleSimulations = StyleSimulations.None,
-                Fill = Brush,
+                Fill = brush,
                 OriginX = 0,
                 OriginY = 0
             };
