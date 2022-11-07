@@ -38,7 +38,7 @@ SOFTWARE.-->
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/sans-eng/Adita.PlexNet.Wpf.Media</RepositoryUrl>
 		<PackageTags>media; wpf; net; net6; plexnet;</PackageTags>
-		<PackageReleaseNotes>First release</PackageReleaseNotes>
+		<PackageReleaseNotes>Added FontImageSource, MaterialIconImageSource, FontAwesomeIcon, FontAwesomeIconImageSource</PackageReleaseNotes>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
