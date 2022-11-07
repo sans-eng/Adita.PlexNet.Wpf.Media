@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\Font Awesome 5 Free-Solid-900.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Adita.PlexNet.Wpf.Media\Adita.PlexNet.Wpf.Media.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\Font Awesome 5 Free-Solid-900.otf" />
   </ItemGroup>
 
 </Project>

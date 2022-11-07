@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:Adita.PlexNet.Wpf.Media.Samples"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <FontFamily x:Key="FontAwesome">pack://application:,,,/Adita.PlexNet.Wpf.Media.Samples;component/Resources/Fonts/#Font Awesome 5 Free Solid</FontFamily>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Adita.PlexNet.Wpf.Media.Samples;component/Resources/Fonts/GlyphNames.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -23,7 +23,7 @@
 namespace Adita.PlexNet.Wpf.Media
 {
     /// <summary>
-    /// Defines the kind of material icon.
+    /// Defines the kind of <see cref="MaterialIcon"/>.
     /// </summary>
     public enum MaterialIconKind
     {
@@ -34,18 +34,18 @@ namespace Adita.PlexNet.Wpf.Media
         /// <summary>
         /// Outline material icon.
         /// </summary>
-        Outline,
+        Outline = 1,
         /// <summary>
         /// Round material icon.
         /// </summary>
-        Round,
+        Round = 2,
         /// <summary>
         /// Sharp material icon.
         /// </summary>
-        Sharp,
+        Sharp = 3,
         /// <summary>
         /// Two tone material icon.
         /// </summary>
-        TwoTone
+        TwoTone = 4
     }
 }
